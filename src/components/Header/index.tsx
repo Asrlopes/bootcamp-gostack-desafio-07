@@ -15,9 +15,22 @@ const Header: React.FC<HeaderProps> = ({ size = 'large' }: HeaderProps) => (
     <header>
       <img src={Logo} alt="GoFinances" />
       <nav>
-        {
-          // Todo
-        }
+        <Link
+          className={
+            window.location.pathname.includes('/import') ? '' : 'active'
+          }
+          to="/"
+        >
+          Listagem
+        </Link>
+        <Link
+          className={
+            window.location.pathname.includes('/import') ? 'active' : ''
+          }
+          to="/import"
+        >
+          Importar
+        </Link>
       </nav>
     </header>
   </Container>
